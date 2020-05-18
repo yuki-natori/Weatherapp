@@ -1,0 +1,38 @@
+.weather
+  .container
+    %h1 日本の天気
+    %h2 日本のまち
+    .box
+      = succeed "東京都" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "1850147"}/
+      = succeed "仙台市" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "2111149"}/
+      = succeed "大阪府" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "1853904"}/
+      = succeed "札幌市" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "2128295"}/
+      = succeed "福岡" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "1863967"}/
+      = succeed "京都" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "1857907"}/
+      = succeed "広島" do
+        %input#cityRadio{:name => "cityRadio", :type => "radio", :value => "1862413"}/
+      %button#submit
+        %i.fas.fa-sun
+        今の天気は？
+    .weatherMain
+      %h2 現在の天気
+      %div
+        %span#weather.bold
+      %div
+        %span#weatherMark.bold
+      %p#icon
+    %div
+      気温
+      %span#temp.bold
+      ℃
+    %div
+      湿度
+      %span#humidity.bold
+      \%
+    
